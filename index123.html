@@ -1,0 +1,140 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://cdn.jsdelivr.net/npm/remixicon@4.3.0/fonts/remixicon.css" rel="stylesheet"/>
+    <link rel="stylesheet" href="style.css"/>
+    <script src="style.js"></script>
+    <title>Portfolio Responsive</title>
+</head>
+<body style="scroll-behavior: smooth;">
+    <nav>
+        <div class="nav_content">
+            <div class="logo"><a href="#">Sneha</a></div>
+            <label for="check" class="checkbox">
+                <i class="ri-menu-line"></i>
+            </label>
+            <input type="checkbox" name="check" id="check">
+            <ul>
+                <li><a class="scroll-link" href="#">Home</a></li>
+                <li><a class="scroll-link" href="./index.html">About</a></li>
+                <li><a class="scroll-link" href="#skills">Skills</a></li>
+                <li><a class="scroll-link" href="#portfolio">Portfolio</a></li>
+                <li><a class="scroll-link" href="#contact">Contact</a></li>
+            </ul>
+        </div>
+    </nav>
+    <section class="section">
+        <div class="section_container">
+            <div class="content">
+                <p class="subtitle">HELLO</p>
+                <h1 class="title">
+                    I'm <span>Sneha<br>a</span> Web Developer
+                </h1>
+                <p class="description">
+                    Welcome to my web developer portfolio!
+                    I'm Sneha, a skilled and creative web developer with a passion for creating beautiful, responsive, and user-friendly websites. I've worked on a variety of web projects, ranging from personal blogs to e-commerce platforms.
+                </p>
+                <div class="action_btns">
+                    <button class="hire_me">Hire me</button>
+                    <button class="portfolio">Portfolio</button>
+                </div>
+            </div>
+            <div class="image">
+                <img src="photo sneha.jpg" alt="Profile"/>
+            </div>
+        </div>
+    </section>
+    <!-- About Section -->
+    <section id="about" class="about_section">
+        <h2>About Me</h2>
+        <p>I'm a web developer with a strong foundation in front-end and back-end technologies. I love creating dynamic and responsive websites that provide a seamless user experience.</p>
+    </section>
+    <!-- Skills Section -->
+    <section id="skills" class="skills_section">
+        <h2>My Skills</h2>
+        <div class="skills_container">
+            <div class="skill">
+                <i class="ri-html5-fill"></i>
+                <h3>HTML5</h3>
+            </div>
+            <div class="skill">
+                <i class="ri-css3-fill"></i>
+                <h3>CSS3</h3>
+            </div>
+            <div class="skill">
+                <i class="ri-javascript-fill"></i>
+                <h3>JavaScript</h3>
+            </div>
+            <div class="skill">
+                <i class="ri-reactjs-fill"></i>
+                <h3>React</h3>
+            </div>
+            <div class="skill">
+                <i class="ri-nodejs-fill"></i>
+                <h3>Github</h3>
+            </div>
+            <div class="skill">
+                <i class="ri-database-fill"></i>
+                <h3>Database Management</h3>
+            </div>
+        </div>
+    </section>
+<!-- Portfolio Section -->
+<section id="portfolio" class="portfolio_section">
+    <h2 class="portfolio_title">My Work</h2>
+    <div class="portfolio_gallery">
+        <div class="portfolio_item">
+            <img src="project 1.png" alt="Project 1">
+            <div class="portfolio_info">
+                <h3>Project 1</h3>
+                <p>  Chat app using react with API</p>
+            </div>
+        </div>
+        <div class="portfolio_item">
+            <img src="project 2.png" alt="Project 2">
+            <div class="portfolio_info">
+                <h3>Project 2</h3>
+                <p>Weather App using  js by api .</p>
+            </div>
+        </div>
+        <div class="portfolio_item">
+            <img src="project 3.png" alt="Project 3">
+            <div class="portfolio_info">
+                <h3>Project 3</h3>
+                <p>Word counter app using html and css.</p>
+            </div>
+        </div>
+    </div>
+</section>
+<!-- Contact Section -->
+<section id="contact" class="contact_section">
+    <h2>Contact Me</h2>
+    <p>Feel free to reach out for any web development opportunities or collaborations!</p>
+    <div class="social_icons">
+        <a href="https://www.linkedin.com/in/sneha-agarwal-b35176251"><i class="ri-linkedin-box-fill"></i></a>
+        <a href="https://github.com/sneha26122003/"><i class="ri-github-fill"></i></a>
+        <a href="https://instagram.com/_agarwalsneha?igshid=NGExMmI2YTkyZg=="><i class="ri-instagram-fill"></i></a>
+    </div>
+</section>
+
+<script>
+    document.querySelectorAll('.scroll-link').forEach(anchor => {
+    anchor.addEventListener('click', function(e) {
+        e.preventDefault();
+        console.log('Anchor clicked:', this.getAttribute('href')); // Debugging line
+        
+        const targetID = this.getAttribute('href');
+        const targetSection = document.querySelector(targetID);
+        
+        window.scrollTo({
+            top: targetSection.offsetTop - document.querySelector('nav').offsetHeight,
+            behavior: 'smooth'
+        });
+    });
+});
+
+</script>
+</body>
+</html>
